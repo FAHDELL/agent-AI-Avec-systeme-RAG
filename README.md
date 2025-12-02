@@ -1,10 +1,10 @@
-# 📘 Project Documentation -- RAG AI (Spring Boot + React)
+# 📘 Project Documentation -- RAG AI (Spring Boot + Thymeleaf)
 
 Ce projet est une application complète **RAG (Retrieval-Augmented
 Generation)** utilisant :
 
 -   **Back-end :** Spring Boot + Spring AI + Ollama\
--   **Front-end :** React + Axios + Progress Bar\
+-   **Front-end :** Thymeleaf + Bootsrap + Axios + Progress Bar\
 -   **Base de données :** PostgreSQL + pgvector\
 -   **Fonctionnalité :** Upload PDF → Split → Embedding → Stockage →
     Chat intelligent basé sur le contexte
@@ -17,7 +17,6 @@ Generation)** utilisant :
  ├── main/java/net/fahd/RAG_AI
  │      ├── controllers
  │      ├── services
- │      ├── config
  │      └── RagAiApplication.java
  └── main/resources
         ├── templates/index.html
@@ -67,12 +66,16 @@ Le code inclut Bootstrap 5.3.3.
 
 ### 4.2. Configuration du `application.properties`
 
-    spring.datasource.url=jdbc:postgresql://localhost:5432/vector_store
-    spring.datasource.username=postgres
-    spring.datasource.password=yourpassword
-    spring.jpa.hibernate.ddl-auto=update
-    spring.ai.ollama.chat.model=llama3
-    spring.ai.ollama.embedding.model=llama3
+        spring.application.name=RAG_AI
+        spring.ai.ollama.base-url=http://localhost:11434
+        spring.ai.ollama.chat.options.model=deepseek-r1
+        spring.ai.vectorstore.pgvector.initialize-schema=true
+        server.port=8899
+        logging.level.org.springframework.ai.chat.client.advisor=DEBUG
+        spring.datasource.url=jdbc:postgresql://localhost:5432/vector_store
+        spring.datasource.username=postgres
+        spring.datasource.password=password
+        logging.level.org.springframework.ai=DEBUG
 
 ### 4.3. Lancer le backend
 
