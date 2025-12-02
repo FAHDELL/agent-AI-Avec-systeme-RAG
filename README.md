@@ -89,6 +89,9 @@ Le code inclut Bootstrap 5.3.3.
 3. Importer un ou plusieurs PDF.
 4. Poser une question.
 
+   <img width="1078" height="831" alt="Capture d&#39;écran 2025-12-02 150244" src="https://github.com/user-attachments/assets/d9a336a2-079f-4b4c-8ac1-e93a3f7725ac" />
+
+
 ---
 
 ## 📄 Licence
